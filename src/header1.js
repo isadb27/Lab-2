@@ -1,7 +1,7 @@
 class HeaderElement extends HTMLElement {
 
     static get observedAttributes (){
-        return ['tit', 'bot1', 'bot2', 'bot3'];
+        return ['tit', 'txt'];
     }
 
     constructor(){
@@ -26,7 +26,7 @@ class HeaderElement extends HTMLElement {
         this.shadowRoot.innerHTML=`
         <style>
           header {
-            background-color: #1976d2;
+            background-color:rgb(0, 0, 0);
             color: white;
             padding: 16px;
             display: flex;
@@ -36,7 +36,7 @@ class HeaderElement extends HTMLElement {
           }
 
           header {
-    background-color: #1976d2;
+    background-color:rgb(0, 0, 0);
     color: white;
     padding: 16px;
     display: flex;
@@ -64,14 +64,8 @@ nav a:hover {
 
 
         <header>
-          <h1><${this.tit}</h1>
-          <nav>
-            <ul>
-              <li><a href="#">${this.bot1}</a></li>
-              <li><a href="#">${this.bot2}</a></li>
-              <li><a href="#">${this.bot3}</a></li>
-            </ul>
-          </nav>
+          <h1>${this.tit}</h1>
+          <p>${this.txt}</p>
         </header>
 
 

@@ -13,16 +13,18 @@ class AppContainer extends HTMLElement {
         this.shadowRoot.innerHTML = `
         <style>
 
+        .container{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        }
+
 
         </style>
 
         <header-element
-        
-
         tit="Blog"
-        bot1="Home"
-        bot2="About"
-        bot3="Contact"
+        txt="Stay in the loop with the latest about our products"
         >
         </header-element>
 
@@ -35,9 +37,40 @@ class AppContainer extends HTMLElement {
         cat6= "🔍 "
         >
         </search-element>
+
+        <div class="container">
         
+        <cards-element
+
         
+        img="https://mui.com/static/images/avatar/2.jpg"
+        cag="Engineer"
+        title= "The future of AI in software engineering" 
+        des="Artificial intelligence is revolutionizing software engineering. Explore how AI-driven tools are enhancing developm avatar: "avatar"
+        autor="Remy Sharp, Travis Howard", date: "July 14, 2021"
+        cag="Hola"
+        img2="https://mui.com/static/images/avatar/2.jpg"
+        aut="Jorgito Perez"
+        date="Hoy"
+        >
+        </cards-element>
+
+        <cards-element
+
         
+        img="https://mui.com/static/images/avatar/2.jpg"
+        cag="Engineer"
+        title= "The future of AI in software engineering" 
+        des="Artificial intelligence is revolutionizing software engineering. Explore how AI-driven tools are enhancing developm avatar: "avatar"
+        autor="Remy Sharp, Travis Howard", date: "July 14, 2021"
+        cag="Hola"
+        img2="https://mui.com/static/images/avatar/2.jpg"
+        aut="Jorgito Perez"
+        date="Hoy"
+        >
+        </cards-element>
+
+        </div>
         
         
         

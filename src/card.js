@@ -1,7 +1,7 @@
 class CardsElement extends HTMLElement {
 
   static get observedAttributes (){
-      return ['card1', 'card2', 'card3', 'card4', 'card5', 'cat6'];
+      return [ 'img', 'title', 'des', 'aut', 'cag', 'img2', 'date'];
   }
 
   constructor(){
@@ -26,29 +26,82 @@ class CardsElement extends HTMLElement {
       this.shadowRoot.innerHTML=`
       <style>
           .card {
-            display: block;
             background-color: white;
-            padding: 20px;
-            border: 1px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-color: #000000;
+            border: 10px;
+            width: 90%;
+            height: auto;
+            margin-left: 70px;
+            margin-right: 70px;
+          }
+
+          .autor{
+            display: flex;
+            justify-content: space-between;
+          }
+          
+          .autor3{
+          display: flex;
+          }
+
+          .autor2{
+          }
+
+          .img22{
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          margin: 5px;
+          }
+
+          .text{
+          margin: 30px 0px;
+          }
+
+          .img{
+          width: 100%;
+          border-top: 10px;
+
+          }
+
+          .datee{
+          margin-right: 10px;
+          }
+
+          .text{
+          margin: 10px;
+          
+          }
+
+          cat{
+          font-size: small;
           }
 
           
       </style>
 
         <div class="card">
-        <button class="butoption">${this.cat1}</button>
-        <button class="butoption">${this.cat2}</button>
-        <button class="butoption">${this.cat3}</button>
-        <button class="butoption">${this.cat4}</button>
-        <button class="butoption">${this.cat5}</button>
+          <div class="image">
+            <img src="${this.img}" alt="" class="img">
+          </div>
 
-        </div>
 
-        <div class="search-container">
-          <input type="text" placeholder="Buscar">
-          <button class="butsearch">${this.cat6}</button>
+          <div class="text"
+            <p class="cat">${this.cag}</p>
+            <h1 class="tit">${this.title}</h1>
+            <p class="desc">${this.des}</p>
+          </div>
+          
+          <div class="autor">
+          <div class="autor3">
+            <img src="${this.img2}" alt="" class="img22">
+            <p class="autor1">${this.aut}</p>
+          </div>
+              <div class="autor2">
+              <p class="datee">${this.date}</p>
+              </div>
+          </div>
         </div>
 
       `;
