@@ -1,22 +1,62 @@
-import './components/header/header.js';
-import './components/search/search.js';
-import './components/card/card.js';
-import './components/news/news.js';
-import './components/dial/dial.js';
+import * as components from './src/indexpapa.js';
 
-const app = document.getElementById('app');
+class AppContainer extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({mode: 'open'});
+    }
+    connectedCallback() {
+        this.render ();
+    }
 
-const header = document.createElement('my-header');
-app.appendChild(header);
+    render () {
+        this.shadowRoot.innerHTML = `
+        <style>
 
-const search = document.createElement('my-search');
-app.appendChild(search);
 
-const card = document.createElement('my-card');
-app.appendChild(card);
+        </style>
 
-const news = document.createElement('my-news');
-app.appendChild(news);
+        <header-element
+        
 
-const dial = document.createElement('my-dial');
-app.appendChild(dial);
+        tit="Blog"
+        bot1="Home"
+        bot2="About"
+        bot3="Contact"
+        >
+        </header-element>
+
+        <search-element
+        cat1= "All categories"
+        cat2= "Company"
+        cat3= "Product"
+        cat4= "Design"
+        cat5= "Engineering"
+        cat6= "🔍 "
+        >
+        </search-element>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <dial-element
+        dia1="1"
+        dia2="2"
+        dia3="3"
+        >
+        </dial-element>
+
+
+        `
+    }
+}
+
+customElements.define('app-container', AppContainer);

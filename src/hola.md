@@ -22,4 +22,3 @@ class MyCard extends HTMLElement {
   }
   
   customElements.define('my-card', MyCard);
-  
